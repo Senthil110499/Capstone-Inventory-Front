@@ -180,7 +180,7 @@ const Signup = () => {
             )}
           </div>
           <div className="col-md-6" style={{marginTop:"50px"}}>
-            <img src="src/sign-up.png" alt="Signup Image" style={{ width: "100%" }} />
+            <img src="public/sign-up.png" alt="Signup Image" style={{ width: "100%" }} />
           </div>
         </div>
       </div>

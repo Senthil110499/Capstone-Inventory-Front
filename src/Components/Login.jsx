@@ -67,7 +67,7 @@ const Login = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-8" style={{ marginTop: "30px" }}>
-            <img src="src/login.png" alt="Login" style={{ maxWidth: "100%" }} />
+            <img src="public/login.png" alt="Login" style={{ maxWidth: "100%" }} />
           </div>
           <div className="col-lg-4" style={{ marginTop: "140px" }}>
             <h2 className="text-center">Inventory Billing</h2>

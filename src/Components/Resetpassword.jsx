@@ -63,7 +63,7 @@ const ResetPassword = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-6" style={{ marginTop: "30px" }}>
-            <img src="src/Password.png" alt="Login" style={{ maxWidth: "90%" }} />
+            <img src="public/Password.png" alt="Login" style={{ maxWidth: "90%" }} />
           </div>
           <div className="col-lg-4" style={{ marginTop: "140px" }}>
               <form>
