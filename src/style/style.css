@@ -1,0 +1,13 @@
+.title{
+    text-align: center;
+}
+
+.wrapper {
+    background-image: url('/src/whitebg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+
+
