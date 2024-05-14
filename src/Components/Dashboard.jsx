@@ -154,13 +154,13 @@ const Dashboard = () => {
         data: inventoryItems.map((item) => item.quantity),
         backgroundColor: [
           "rgba(255, 99, 132, 0.6)",
-          "rgba(153, 102, 255, 0.6)",
+          "rgba(128, 0, 255, 0.6)",
           "rgba(255, 159, 64, 0.6)",
           "rgba(75, 192, 192, 0.6)",
         ],
         borderColor: [
           "rgba(255, 99, 132)",
-          "rgba(153, 102, 255)",
+          "rgba(128, 0, 255)",
           "rgba(255, 159, 64)",
           "rgba(75, 192, 192)",
         ],

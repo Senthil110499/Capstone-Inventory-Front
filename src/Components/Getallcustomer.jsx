@@ -116,6 +116,7 @@ const Getallcustomer = () => {
                   <div className="col" key={customer._id}>
                     <div className="card h-100">
                       <div className="card-body text-center card text-bg-secondary">
+                        <img src="Profile.webp" alt="Signup Image" style={{ width: "100%" }} />
                         <hr />
                         <h5 className="card-title">
                           <b>Name : </b> {customer.name}
