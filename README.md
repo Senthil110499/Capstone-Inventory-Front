@@ -5,7 +5,7 @@ Welcome to the `Inventory Billing App` Capstone Project! This project is a full-
 
 ## **Inventory Billing Links**
 
-Frontend `Netlify` Deployed URL ⌛ => [Inventory Billing App-Frontend](https://inventory-billing-app-fed.netlify.app/)
+Frontend `Netlify` Deployed URL ⌛ => [Inventory Billing App-Frontend](https://inventory-billing-app-fsd.netlify.app/)
 
 Backend `Render` Deployed URL ⌛ => [Inventory Billing App-Backend](https://inventory-billing-app-l2ei.onrender.com/)
 
