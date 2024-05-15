@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Base from "../Base/Base.jsx";
 import { TextField, Button, Alert } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 const AddCategory = () => {
   const [name, setName] = useState("");
@@ -63,9 +65,24 @@ const AddCategory = () => {
 
   return (
     <Base title="Add Category">
-      <div className="container mt-4">
-        <div className="row justify-content-center">
-          <div className="col-md-6">
+      <Box
+        sx={{
+          backgroundImage: 'url("Inventory.png")',
+          minHeight: "100vh",
+        }}
+      >
+        <Container maxWidth="sm">
+          <Box
+            sx={{
+              backgroundImage: 'url("Inventory.png")',
+              p: 3,
+              border: 1,
+              borderRadius: 2,
+              boxShadow: 2,
+              backgroundColor: "#20c997", // Background color with opacity
+            }}
+            style={{marginTop:"50px"}}
+          >
             <TextField
               label="Category Name"
               variant="outlined"
@@ -88,12 +105,11 @@ const AddCategory = () => {
               error={!!descriptionError}
               helperText={descriptionError}
             />
-            <div className="text-center">
+            <div style={{ textAlign: "center", marginTop: "20px" }}>
               <Button
                 variant="contained"
                 color="primary"
                 onClick={handleAddCategory}
-                style={{ marginTop: "20px" }}
               >
                 Add Category
               </Button>
@@ -107,10 +123,10 @@ const AddCategory = () => {
               <Alert severity="error" style={{ marginTop: "20px" }}>
                 {errorMessage}
               </Alert>
-              )}
-          </div>
-          </div>
-      </div>
+            )}
+          </Box>
+      </Container>
+      </Box>
     </Base>
   );
 };

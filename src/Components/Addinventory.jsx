@@ -3,6 +3,8 @@ import Base from "../Base/Base.jsx";
 import { TextField, Button, Alert } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Autocomplete from "@mui/material/Autocomplete";
+import Box from "@mui/material/Box";
+
 
 const Addinventory = () => {
   const [name, setName] = useState("");
@@ -104,9 +106,26 @@ const Addinventory = () => {
 
   return (
     <Base title="Add Inventory Item">
+      <Box
+        sx={{
+          backgroundImage: 'url("Inventory.png")',
+          minHeight: "100vh",
+        }}
+      >
       <div className="container mt-4">
         <div className="row justify-content-center">
-          <div className="col-md-6">
+            <div className="col-md-6">
+              <Box
+            sx={{
+              backgroundImage: 'url("Inventory.png")',
+              p: 3,
+              border: 1,
+              borderRadius: 2,
+              boxShadow: 2,
+              backgroundColor: "#20c997", // Background color with opacity
+            }}
+            style={{marginTop:"20px"}}
+          >
             <TextField
               label="Item Name"
               variant="outlined"
@@ -192,10 +211,12 @@ const Addinventory = () => {
               <Alert severity="error" style={{ marginTop: "20px" }}>
                 {errorMessage}
               </Alert>
-            )}
+                )}
+                </Box>
           </div>
         </div>
-      </div>
+        </div>
+        </Box>
     </Base>
   );
 };

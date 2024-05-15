@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { TextField, Button } from "@mui/material";
 import Base from "../Base/Base.jsx";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 const EditCategory = () => {
   const { id } = useParams();
@@ -25,12 +27,8 @@ const EditCategory = () => {
 
   const handleUpdate = async () => {
     try {
-      if (!categoryData.name.trim()) {
-        setErrorMessage("All Category is required.");
-        return;
-      }
-      else if (!categoryData.description.trim()) {
-        setErrorMessage("All Category is required.");
+      if (!categoryData.name.trim() || !categoryData.description.trim()) {
+        setErrorMessage("All fields are required.");
         return;
       }
 
@@ -62,9 +60,24 @@ const EditCategory = () => {
 
   return (
     <Base title="Edit Category">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-md-6">
+      <Box
+        sx={{
+          backgroundImage: 'url("Inventory.png")',
+          minHeight: "100vh",
+        }}
+      >
+        <Container maxWidth="sm">
+          <Box
+            sx={{
+              backgroundImage: 'url("Inventory.png")',
+              p: 3,
+              border: 1,
+              borderRadius: 2,
+              boxShadow: 2,
+              backgroundColor: "#20c997", // Background color with opacity
+            }}
+            style={{marginTop:"50px"}}
+          >
             <TextField
               label="Name"
               variant="outlined"
@@ -89,22 +102,23 @@ const EditCategory = () => {
               error={!!errorMessage}
               helperText={errorMessage}
             />
-            <div className="text-center">
+            <div style={{ textAlign: "center", marginTop: "20px" }}>
               <Button
                 variant="contained"
                 color="primary"
-                style={{ marginTop: "20px" }}
                 onClick={handleUpdate}
               >
                 Update
               </Button>
               {successMessage && (
-                <div style={{ color: "green" }}>{successMessage}</div>
+                <div style={{ color: "green", marginTop: "10px" }}>
+                  {successMessage}
+                </div>
               )}
             </div>
-          </div>
-        </div>
-      </div>
+          </Box>
+        </Container>
+      </Box>
     </Base>
   );
 };

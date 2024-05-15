@@ -20,7 +20,7 @@ const Base = ({ title, children }) => {
   return (
     <div className="wrapper">
       <header>
-        <AppBar sx={{ backgroundColor: "purple" }} position="relative">
+        <AppBar sx={{ backgroundColor: "#6f42c1" }} position="relative">
           <Toolbar variant="dense">
             <Box
               sx={{

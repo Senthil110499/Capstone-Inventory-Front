@@ -3,6 +3,7 @@ import Base from "../Base/Base.jsx";
 import { TextField, Button, Alert } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
 import Autocomplete from "@mui/material/Autocomplete";
+import Box from "@mui/material/Box";
 
 const EditInventory = () => {
   const [name, setName] = useState("");
@@ -115,9 +116,26 @@ const EditInventory = () => {
 
   return (
     <Base title="Edit Inventory Item">
+      <Box
+        sx={{
+          backgroundImage: 'url("Inventory.png")',
+          minHeight: "100vh",
+        }}
+      >
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-6">
+            <Box
+            sx={{
+              backgroundImage: 'url("Inventory.png")',
+              p: 3,
+              border: 1,
+              borderRadius: 2,
+              boxShadow: 2,
+              backgroundColor: "#20c997", // Background color with opacity
+            }}
+            style={{marginTop:"20px"}}
+          >
             <TextField
               label="Item Name"
               variant="outlined"
@@ -199,9 +217,11 @@ const EditInventory = () => {
                 </div>
               )}
             </div>
+            </Box>
           </div>
         </div>
       </div>
+      </Box>
     </Base>
   );
 };

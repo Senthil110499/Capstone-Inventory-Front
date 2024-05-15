@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Base from "../Base/Base.jsx";
 import { useNavigate } from "react-router-dom";
+import Box from "@mui/material/Box";
 
 const AddCustomer = () => {
   const [customerData, setCustomerData] = useState({
@@ -74,9 +75,26 @@ const AddCustomer = () => {
 
   return (
     <Base title="Add Customer">
+      <Box
+        sx={{
+          backgroundImage: 'url("Inventory.png")',
+          minHeight: "100vh",
+        }}
+      >
       <div className="container mt-4">
         <div className="row justify-content-center">
-          <div className="col-md-6">
+            <div className="col-md-6">
+            <Box
+            sx={{
+              backgroundImage: 'url("Inventory.png")',
+              p: 3,
+              border: 1,
+              borderRadius: 2,
+              boxShadow: 2,
+              backgroundColor: "#20c997", // Background color with opacity
+            }}
+            style={{marginTop:"20px"}}
+          >
             <div className="mb-3">
               <label htmlFor="name" className="form-label">
                 Name
@@ -152,9 +170,11 @@ const AddCustomer = () => {
                 {errorMessage}
               </div>
             )}
+            </Box>
           </div>
         </div>
       </div>
+      </Box>
     </Base>
   );
 };
