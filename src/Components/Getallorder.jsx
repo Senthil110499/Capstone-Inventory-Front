@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Base from "../Base/Base.jsx";
 import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
+import Box from "@mui/material/Box";
 
 const Getallorder = () => {
   const [orders, setOrders] = useState([]);
@@ -87,6 +88,14 @@ const Getallorder = () => {
   {
     return (
       <Base title="Orders">
+        <Box
+        sx={{
+          backgroundImage: 'url("img-inventory.png")',
+          height: "100vh",
+          backgroundRepeat:"no-repeat",
+          backgroundPositionX:"center"
+        }}
+      >
         <div className="container mt-4">
           <div className="text-end mb-3">
             <button
@@ -156,6 +165,7 @@ const Getallorder = () => {
             </div>
           )}
         </div>
+        </Box>
       </Base>
     );
   }

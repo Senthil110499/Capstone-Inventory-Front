@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Base from "../Base/Base.jsx";
 import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
+import Box from "@mui/material/Box";
+
 const Addbill = () => {
   const [orders, setOrders] = useState([]);
   const [selectedOrderId, setSelectedOrderId] = useState("");
@@ -89,9 +91,26 @@ const Addbill = () => {
 
   return (
     <Base title="Add Bill">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-9 offset-md-1 mt-5">
+      <Box
+        sx={{
+          backgroundImage: 'url("Inventory.png")',
+          height: "100vh",
+        }}
+      >
+      <div className="container mt-4">
+        <div className="row justify-content-center">
+          <div className="col-md-6">
+            <Box
+            sx={{
+              backgroundImage: 'url("Inventory.png")',
+              p: 3,
+              border: 1,
+              borderRadius: 2,
+              boxShadow: 2,
+              backgroundColor: "#20c997", // Background color with opacity
+            }}
+            style={{marginTop:"20px"}}
+          >
             <div className="mb-3">
               <label htmlFor="orderSelect" className="form-label">
                 Select Order
@@ -159,9 +178,11 @@ const Addbill = () => {
                 </p>
               </div>
             )}
+            </Box>
           </div>
         </div>
       </div>
+      </Box>
     </Base>
   );
 };

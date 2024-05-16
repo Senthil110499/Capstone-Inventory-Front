@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Base from "../Base/Base.jsx";
 import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
+import Box from "@mui/material/Box";
 
 const Getallcustomer = () => {
   const [customers, setCustomers] = useState([]);
@@ -87,6 +88,14 @@ const Getallcustomer = () => {
 
   return (
     <Base title="Customers">
+      <Box
+        sx={{
+          backgroundImage: 'url("img-inventory.png")',
+          height: "100vh",
+          backgroundRepeat:"no-repeat",
+          backgroundPositionX:"center"
+        }}
+      >
       <div className="container">
         <div className="row">
           <div className="col">
@@ -167,6 +176,7 @@ const Getallcustomer = () => {
           </div>
         </div>
       </div>
+      </Box>
     </Base>
   );
 };

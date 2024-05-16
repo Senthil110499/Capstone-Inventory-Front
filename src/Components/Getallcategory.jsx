@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Base from "../Base/Base.jsx";
 import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
+import Box from "@mui/material/Box";
 
 const Getallcategory = () => {
   const [categories, setCategories] = useState([]);
@@ -70,6 +71,14 @@ const Getallcategory = () => {
 
   return (
     <Base title="Categories">
+      <Box className="back"
+        sx={{
+          backgroundImage: 'url("img-inventory.png")',
+          height:"100vh",
+          backgroundRepeat:"no-repeat",
+          backgroundPositionX:"center"
+        }}
+      >
       <div className="container mt-4">
         <div className="row">
           <div className="col-md-9 offset-md-3">
@@ -130,6 +139,7 @@ const Getallcategory = () => {
           </div>
         )}
       </div>
+      </Box>
     </Base>
   );
 };

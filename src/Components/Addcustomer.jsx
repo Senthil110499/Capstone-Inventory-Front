@@ -78,7 +78,7 @@ const AddCustomer = () => {
       <Box
         sx={{
           backgroundImage: 'url("Inventory.png")',
-          minHeight: "100vh",
+          height: "100vh",
         }}
       >
       <div className="container mt-4">

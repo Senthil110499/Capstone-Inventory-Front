@@ -68,7 +68,7 @@ const AddCategory = () => {
       <Box
         sx={{
           backgroundImage: 'url("Inventory.png")',
-          minHeight: "100vh",
+          height:"100vh",
         }}
       >
         <Container maxWidth="sm">

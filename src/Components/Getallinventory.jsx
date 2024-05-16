@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Base from "../Base/Base.jsx";
 import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
+import Box from "@mui/material/Box";
 
 const Getallinventory = () => {
   const [inventoryItems, setInventoryItems] = useState([]);
@@ -74,6 +75,14 @@ const Getallinventory = () => {
 
   return (
     <Base title="Inventory Items">
+      <Box
+        sx={{
+          backgroundImage: 'url("img-inventory.png")',
+          height: "100vh",
+          backgroundRepeat:"no-repeat",
+          backgroundPositionX:"center"
+        }}
+      >
       <div className="container mt-4">
         <div className="row">
           <div className="col-md-9 offset-md-3">
@@ -148,6 +157,7 @@ const Getallinventory = () => {
           </div>
         )}
       </div>
+      </Box>
     </Base>
   );
 };

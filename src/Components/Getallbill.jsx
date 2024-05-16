@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Base from "../Base/Base.jsx";
 import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
+import Box from "@mui/material/Box";
 
 const Getallbill = () => {
   const [bills, setBills] = useState([]);
@@ -88,6 +89,14 @@ const Getallbill = () => {
 
   return (
     <Base title="Bills">
+      <Box
+        sx={{
+          backgroundImage: 'url("img-inventory.png")',
+          height: "100vh",
+          backgroundRepeat:"no-repeat",
+          backgroundPositionX:"center"
+        }}
+      >
       <div className="container mt-4">
         <div className="text-end mb-3">
           <button
@@ -198,6 +207,7 @@ const Getallbill = () => {
           </div>
         )}
       </div>
+      </Box>
     </Base>
   );
 };

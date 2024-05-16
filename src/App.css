@@ -58,11 +58,3 @@
   font-family: 'poppins', sans-serif;
 }
 
-.back {
-  background-image: url(/images/image1.jpg);
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-weight: 700;
-  color: #61A542;
-}
